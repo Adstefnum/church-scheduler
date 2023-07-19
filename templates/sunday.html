@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sunday Schedule Assigner</title>
+</head>
+<body>
+    <h1>Sunday Schedule Assigner</h1>
+    <form method="POST">
+        <label for="call_to_worship">Call to Worship:</label>
+        <select id="call_to_worship" name="call_to_worship">
+            {% for user in users %}
+                <option value="{{ user.id }}">{{ user }}</option>
+            {% endfor %}
+        </select>
+        <!-- Add other fields here with similar dropdowns for each role -->
+        <br>
+        <input type="submit" value="Assign">
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tuesday Schedule Assigner</title>
+</head>
+<body>
+    <h1>Tuesday Schedule Assigner</h1>
+    <form method="POST">
+        <label for="teacher">Teacher:</label>
+        <select id="teacher" name="teacher">
+            {% for user in users %}
+                <option value="{{ user.id }}">{{ user }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Assign">
+    </form>
+</body>
+</html>
